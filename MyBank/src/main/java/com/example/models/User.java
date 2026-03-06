@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 @Data // automatic  Getter and Setter , toString......
@@ -17,6 +19,9 @@ public class User {
 
     @Column(unique = true)
     private String email;
+
+    @OneToMany(mappedBy ="owner",cascade = CascadeType.ALL)
+    private List<Account> accounts;
 
     public User(String firstName,String lastName,String email){
         this.firstName = firstName;
