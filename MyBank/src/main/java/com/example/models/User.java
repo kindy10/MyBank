@@ -1,5 +1,6 @@
 package com.example.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy ="owner",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Account> accounts;
 
     public User(String firstName,String lastName,String email){

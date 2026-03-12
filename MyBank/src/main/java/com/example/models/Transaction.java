@@ -1,5 +1,6 @@
 package com.example.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Transaction {
     //The account that initiated the transaction
     @ManyToOne
     @JoinColumn(name = "source_account_id")
+    @JsonIgnoreProperties({"owner","version"})
     private Account sourceAccount;
 
     //The account that receiving the money (null for cas withdrawals)
