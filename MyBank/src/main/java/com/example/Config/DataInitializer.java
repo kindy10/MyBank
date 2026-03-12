@@ -24,7 +24,7 @@ public class DataInitializer {
                 List<String> lastNames = List.of("Bah", "Balde", "Diakite", "Diau", "Coulibaly", "Socgfak", "Sylla", "Camara", "MBaye", "Bah", "Snwoui", "MvB", "Junior");
 
                 for (int i = 0; i < 13; ++i) {
-                    User user = new User(firstNames.get(i), lastNames.get(i), firstNames.get(i).toLowerCase() + "." + lastNames.get(i).toLowerCase() + "@bank.com");
+                    User user = new User(firstNames.get(i), lastNames.get(i), firstNames.get(i).toLowerCase() + "." + lastNames.get(i).toLowerCase() + "@Kibank.com");
                     userRepository.save(user); //Save to get the ID
 
                     //2. Create and persist the Account linked to that User
