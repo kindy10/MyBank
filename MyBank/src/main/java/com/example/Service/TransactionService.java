@@ -15,5 +15,8 @@ public class TransactionService {
     public List<Transaction> getHistoryByAccountId(Long accountId){
         return transactionRepository.findBySourceAccountIdOrDestinationAccountId(accountId,accountId);
     }
+    public List<Transaction>getAllTransaction(){
+        return transactionRepository.findAll();
+    }
 
 }

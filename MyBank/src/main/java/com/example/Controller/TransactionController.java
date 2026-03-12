@@ -19,5 +19,10 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.getHistoryByAccountId(accountId));
     }
 
+    @GetMapping
+    public ResponseEntity<List<Transaction>> getAllTransaction(){
+        return ResponseEntity.ok(transactionService.getAllTransaction());
+    }
+
 
 }
