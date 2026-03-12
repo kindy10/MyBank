@@ -66,7 +66,7 @@ public class AccountController {
             });
         }
         executor.shutdown();
-        return ResponseEntity.ok("Stress test lauched with 10 simultaneous threads !!");
+        return ResponseEntity.ok("Stress test launched with 10 simultaneous threads !!");
 
     }
 
