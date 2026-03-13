@@ -1,0 +1,24 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+### First test
+GET http://localhost:8080/api/accounts
+Content-Type: application/json
+
+###Withdrawal Test
+POST http://localhost:8080/api/accounts/stress-test?accountId=1
+
+####  Deposit Test
+POST http://localhost:8080/api/accounts/1/deposit?amount=500.00
+
+### test transfer
+POST http://localhost:8080/api/accounts/transfer?fromId=1&toId=2&amount=2000.00
+
+###GET transaction
+GET http://localhost:8080/api/transactions
+
+###Get transaction by id
+GET http://localhost:8080/api/transactions/accountId?accountId=1
