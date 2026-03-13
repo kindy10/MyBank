@@ -15,7 +15,7 @@ Concurrency Control: Uses PESSIMISTIC_WRITE and @Version to prevent race conditi
 
 Data Seeding: Automatically initializes some unique users and accounts on startup for testing.
 ## Project Overview
-![MyBank Screenshot](Images/img.png)
+![MyBank Screenshot](MyBank/Images/img.png)
 
 🛠️ Technical Stack
 Backend: Java 25, Spring Boot 4+, Spring Data JPA.
