@@ -50,7 +50,7 @@ public class AccountController {
     }
 
     //Stress test
-    @PostMapping("/stress-tess")
+    @PostMapping("/stress-test")
     public ResponseEntity<String> runStressTest(@RequestParam Long accountId){
         var executor = java.util.concurrent.Executors.newFixedThreadPool(10);
         BigDecimal amountPerWithdrawal = new BigDecimal("100.00");
